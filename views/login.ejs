@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login </title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  </head>
+  <body>
+    
+    <%- include('header',{userName:user}) %> 
+    
+    
+    <!-- component -->
+    <div class="w-screen h-screen flex justify-center items-center bg-white-900"data-aos="fade-up">
+      <form method="post" action="/adminLogin" 
+        class="
+          p-10
+          bg-white
+          rounded
+          flex
+          justify-center
+          items-center
+          flex-col
+          shadow-md
+        "
+      >
+        <img fill="none"
+            stroke="currentColor"
+             stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2" 
+            class="w-20 h-20 text-white  rounded-full"
+            style="margin-left: 0px;"
+             src="/images/logo.jpeg" >
+
+        <p class="mb-5 text-3xl  text-gray-600">Admin Login</p>
+        <input
+          type="email"
+          name="email"
+          class="
+            mb-5
+            p-3
+            w-80
+            focus:border-yellow-600
+            rounded
+            border-2
+            outline-none
+          "
+          autocomplete="off"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          id="myinput"
+          class="
+            mb-5
+            p-3
+            w-80
+            focus:border-yellow-600
+            rounded
+            border-2
+            outline-none
+          "
+          autocomplete="off"
+          placeholder="Password"
+          required
+
+          
+        />
+        <div>
+        <input onclick="myfunction()" class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> 
+        <label style="color: grey;"class="form-check-label" for="flexCheckDefault"> show password </label>
+        </div>
+
+        <button
+          class="button 
+            bg-yellow-600
+            hover:bg-yellow-700
+            text-white
+            font-bold
+            p-2
+            rounded
+            w-80
+          "
+          name="sublogin"
+          id="login"
+          type="submit"
+          style="background-color:#FA8A53"
+        >
+          <span>Login</span>
+        </button>
+       <div  >
+       
+        <%if(locals.logout){%>
+          <div class="alter alert-success text-center">
+            <%=logout%>
+          </div>
+          <%}%>
+      </form>
+    </div>
+
+
+<!--our aos data-->
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init({duration: 1000,
+              offset: 300,
+              delay: 0,
+            });
+    </script>
+
+<script>
+  function myfunction(){
+    var x=document.getElementById("myinput");
+    if(x.type ==="password"){
+      x.type="text";
+    }
+    else{
+      x.type="password";
+    }
+  }
+</script>
+</div>
+<%- include('footer') %>
+  </body>
+</html>

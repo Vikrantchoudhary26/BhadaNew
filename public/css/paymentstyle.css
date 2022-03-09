@@ -1,0 +1,350 @@
+#section4 {
+  border: 1px solid #fa8a53;
+  padding: 10px 30px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.radio {
+  padding: 10px 20px;
+}
+
+label > input[type="radio"] {
+  display: none;
+}
+label > input[type="radio"] + *::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.3rem;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: gray;
+}
+label > input[type="radio"]:checked + *::before {
+  background: radial-gradient(
+    #fa8a53 0%,
+    #fa8a53 40%,
+    transparent 50%,
+    transparent
+  );
+  border-color: #fa8a53;
+}
+label > input[type="radio"]:checked + * {
+  color: #fa8a53;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196f3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+
+.payonline-submit-btn {
+  background-color: #fa8a53;
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 550;
+  padding: 10px;
+  width: 120px;
+  border-radius: 10px;
+}
+
+.payonline-submit-btn:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.width_full {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.width_full {
+  display: flex;
+  width: 100;
+  justify-content: center;
+}
+#form_submit {
+  background-color: white;
+  border: 1px solid #fa8a53;
+  color: #fa8a53;
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 100px;
+}
+
+#form_submit:hover {
+  background-color: #fa8a53;
+  /* border: 1px solid #fa8a53; */
+  color: #ffff;
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+#my_blur {
+  width: 100%;
+}
+
+#my_blur.active {
+  /* .active and :active work differently */
+  filter: blur(20px);
+}
+
+#cod_online {
+  display: none;
+  flex-direction: row;
+  width: 600px;
+
+  justify-content: center;
+
+  position: fixed;
+  top: 30%;
+
+  background-color: white;
+  border: 1px solid #fa8a53;
+  border-radius: 10px;
+}
+
+.pay_button {
+  margin: 15px 10px;
+  width: 200px;
+  padding: 10px;
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  font-weight: 600;
+  border: 1px solid #fa8a53;
+
+  border-radius: 10px;
+
+  background-color: #ffff;
+  color: #fa8a53;
+}
+
+.pay_button:hover {
+  background-color: #fa8a53;
+  color: #ffff;
+}
+
+#cod_submit,
+#cod_cancel {
+  display: none;
+  background-color: white;
+  border: 1px solid #fa8a53;
+  color: #fa8a53;
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 10px;
+  /* width: 100px; */
+}
+
+#cod_submit:hover,
+#cod_cancel:hover {
+  background-color: #fa8a53;
+  color: #ffff;
+}
+
+#cod_btn:active {
+  background-color: #fa8a53;
+  color: #ffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+#cod_cancel a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.submit_cancel {
+  display: flex;
+  flex-direction: row;
+  width: 230px;
+  justify-content: space-evenly;
+  position: fixed;
+  top: 42%;
+  margin: 10px 0px;
+}
+
+#payon_cancel {
+  width: 70px;
+  background-color: #fa8a53;
+  border: 1px solid #fa8a53;
+  color: #ffff;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#payon_cancel:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.paynow_cancel {
+  width: 230px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 600px) {
+  .width_full {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .pay_button {
+    width: 150px;
+  }
+}
+
+/* section 4 */
+
+#section4 {
+  position: fixed;
+  top: 20%;
+  display: none;
+  flex-direction: column;
+  width: 60%;
+  background-color: white;
+}
+@media (max-width: 700px) {
+  #cod_online {
+    width: 90%;
+    top: 45%;
+  }
+  .submit_cancel {
+    top: 55%;
+  }
+}
+
+#section4 h3 {
+  font-size: 30px;
+  color: #fa8a53;
+}
+
+#section4 input {
+  height: 45px;
+  font-size: 15px;
+  padding-left: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 10px;
+  border: 1px solid rgb(87, 87, 87);
+  border-radius: 5px;
+}
+
+#section4 input:focus {
+  outline: #fa8a53;
+  border: 1px solid #fa8a53;
+}
+
+#section4 label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.paynow_cancel {
+  margin-top: 10px;
+}
+
+.exp_cvv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* padding: 10px ; */
+}
+
+.exp_cvv div {
+  padding-right: 20px;
+}
+
+@media (max-width: 625px) {
+  .exp_cvv {
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px ; */
+  }
+}
