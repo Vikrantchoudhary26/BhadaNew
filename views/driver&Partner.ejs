@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Come Join Us! Attach your mini truck or bike with Porter</title>
+    <link rel="stylesheet" href="/css/driver&Partner.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="icon" href="https://d35ppnqksufxmo.cloudfront.net/frontend_website/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajx/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/133eda6a97.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="../navbar/navbar.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  </head>
+       <style>
+         #navbar{
+           height: 50px;
+         }
+       </style>
+  <body width="100%">
+    <div>
+      <%- include('header',{userName:user}) %> 
+    </div>
+    
+   <!-- <div class="navbarfinal"> -->
+    <!--<div id="navbar"></div>-->
+    
+     <!-- <div id="navbar1"></div>
+   </div> -->
+
+<!--<div class="modalp" id="modalp">
+  <div class="modal-header">
+    <div class="title">Track order</div>
+    <button data-close-button class="close-button">&#x2715;</button>
+  </div>
+  <div id="hr"></div>
+  <div class="modal-body">
+    <input type="text" placeholder="CRN or Docket number" class="crn" />
+    <input type="text" placeholder="Mobile number" class="crn" />
+    <button id="track" class="crn tr">TRACK ORDER</button>
+
+  </div>
+  <div id="text">
+    Enter your Booking Number for Spot order (e.g. CRN12345678)
+    and Docket Number for Intercity Parcel order (e.g. 1234567)
+    along with the Mobile number used while booking.
+  </div>
+</div>-->
+
+    <div id="main-container" style="
+    height: 520px;
+">     
+<%if(registered!='') {%>
+<div class="alter alert-success text-center">
+  <%=registered%>
+</div>
+<%}%>
+      <div id="banner-container">
+        <div>
+          <img class="banner-img" src="/images/bhadaCarousel2.png" alt="banner" >
+            <!-- intro text on banner starts -->
+          <h1 class="heading"><div class="deskbannerTitle" style="text-shadow: 0 0 8px #050505, 0 0 10px #050505">Attach mini trucks or bike</div></h1>
+          <div class="sub-sub-heading" style="color: #fff; text-shadow: 0 0 5px #050505, 0 0 7px #050505">Earn money by delivering goods, courier and packages. Get a part or full time delivery job</div>
+              <!-- banner text end -->
+        </div>
+      </div>
+      <div class="form-text">
+        <form id="inlinedp001" style="
+        margin-top: 50px;
+    " method="post" action="/driverRegistration">
+          <div class="form-heading">Attach Vehicle Now</div>
+          <div id="fillup">
+            <input name="driverName" type="text" id="name" class="form-control" placeholder="Name" >
+            <input name="driverPhnNo" type="text" id="contact" class="form-control" placeholder="+91 -" minlength="10" maxlength = "10">
+      
+            <div id="inlinedp0030">
+              <select name="city" id="city" class="form-control_2" placeholder="CITY">
+                  <option value="India">CITY</option>
+				  <option value="Indore" >Indore</option>
+				  <option value="Bhopal" >Bhopal</option>
+				  <option value="Jabalpur" >Jabalpur</option>
+				 <option value="Gwalior" >Gwalior</option>
+				  <option value="	Ujjain" >	Ujjain</option>
+				  <option value="Sagar" >Sagar</option>
+				  <option value="Rewa" >Rewa</option>
+				  <option value="katni" >katni</option>
+				  <option value="Singrauli">Singrauli</option>
+				  <option value="Dindori" >Dindori</option>
+				  <option value="Seoni" >Seoni</option>
+				  <option value="Damoh" >Damoh</option>
+				  <option value="Itarsi" >Itarsi</option>
+				  <option value="Mandsaur" >Mandsaur</option>
+				  <option value="Khargone" >Khargone</option>
+				  <option value="Sagar" >Sagar</option>
+				  <option value="Khandwa">Khandwa</option>
+				   <option value="Ratlam">Ratlam</option>
+					<option value="Vidisha">Vidisha</option>
+					<option value="Shivpuri">Shivpuri</option>
+                  <option value="Betul" >Betul</option>
+                  <option value="Narmadapuram">Narmadapuram</option>
+                  <option value="Datia" >Datia</option>
+				  <option value="Nagda" >Nagda</option>
+				  <option value="Chhindwara" >Chhindwara</option>
+				  <option value="Ratlam" >Ratlam</option>
+				  <option value="Satna" >Satna</option>
+				  <option value="Dewas" >Dewas</option>
+				  <option value="Guna" >Guna</option>
+				 <option value="Chhatarpur" >Chhatarpur</option>
+				 <option value="Neemuch" >Neemuch</option>
+				 <option value="Pithampur" >Pithampur</option>
+				 <option value="Morena" >Morena</option>
+				 <option value="Sehore" >Sehore</option>
+				 <option value="Bhind" >Bhind</option>
+				 <option value="Burhanpur" >Burhanpur</option>
+                  <option value="Hyderbad" >Hyderbad</option>
+                  <option value="Chennai" >Chennai</option>
+				 <option value="Delhi" >Delhi NCR</option>
+				<option value="Bengluru" >Bengluru</option>
+				  <option value="Ahemdaba" >Ahemdaba</option>
+                  <option value="Pune" >Pune</option>
+                  <option value="Kolkata" >Kolkata</option>
+                  <option value="Surat" >Surat</option>
+                  <option value="Lucknow" >Lucknow</option>
+                  <option value="Jaipur" >Jaipur</option>
+                  <option value="Jaipur" >Others</option>
+              </select>
+                       
+              <select name="vehicleType" id="city_2" class="form-control_3" placeholder="SELECT VEHICLE">
+                 
+                  
+                  
+                  <option value="E- Rickshaw" >E- Rickshaw</option>
+                  <option value="Ape / 3 Wheeler" >Ape / 3 Wheeler </option>
+                  <option value="4 - Wheeler" >4 - Wheeler</option>
+                  
+              </select>
+      
+           
+              <div id="inlinedp0031" ></div>
+              <select name="promo" class="form-control_4" placeholder="TATA ACE">
+                <option value="India" >WHERE DID YOU HEAR ABOUT US?</option>
+                <option value="India" > BUS ADS</option>
+                <option value="USA" >PAMPHLET</option>
+                <option value="China" >GARAGE HOARDING</option>
+                <option value="Nepal" >NEWSPAPER ADS</option>
+                <option value="Australia" >DRIVER REFERRAL</option>
+                <option value="France" >CUSTOMER REFERRAL</option>
+                <option value="Germany" >CHANNEL PARTNER</option>
+                <option value="South-Africa" >OTHERS</option>
+                <option value="Nigeria" >FOS</option>
+                <option value="Mexico" >ONLINE/FACEBOOK</option>
+                <option value="Argentina" >SMART SHIFT</option>
+              </select>
+      
+            </div>
+          </div>
+          <div id="btn">
+            <button type="submit" >REGISTER</button>
+          </div>
+        </form>
+        <div id="inlinedp002">
+          <h2 id="sei">Start Earning Immediately</h2>
+         <p >Download the partner app and register</p>
+          <!--<a href="https://play.google.com/store/apps/details?id=com.theporter.android.driverapp&referrer=web_tracking_id%253D48b17d17b10c30f06830cac21d69e36b">
+            <img id="inlinedp003" src="./images/getApp.png" alt="">
+          </a>-->
+        </div>
+      </div>
+	  <br><br>
+        <!-- intro text on banner end -->
+          <!-- Porter Advantage Section-->
+      <div class="banner-footer">
+        <h2 class="heading2">BHADA ADVANTAGE</h2>
+        <div><input type="button" class="btn_2"></div><br>
+        <div class="imagebanner">
+          <div class="features">
+            <img class="img" src="/images/bar.png" alt="budget">
+            <div class="title">Regular Trips</div>
+            <div class="sub-title">With our growing presence across <br>  multiple cities, we always have our  <br>  hands full! This means you will never  <br>  run out of trips.</div>
+          </div>
+      
+          <div class="features">
+            <img class="img" id="box-img" src="/images/box.png" alt="box">
+            <div class="title">Better Earning</div>
+            <div class="sub-title">Earn more by partnering with the best!  <br>  Regular trips and efficient service can <br>   grow your earnings!</div>
+          </div>
+      
+          <div class="features">
+            <img class="img" src="/images/budget.png" alt="budget">
+            <div class="title">On-Time Payment</div>
+            <div class="sub-title">Be assured to receive all payments on  <br>  time & get the best in class support,  <br>  when you attach mini truck with  <br>  Porter.</div>
+          </div>
+      
+        </div>
+      </div>
+	  <br>
+          <!-- image text detail ends -->
+           <!-- first skew and content starts  -->
+      <div class="container-info">
+        <div class="info-title">
+            <div class="title2">MAKING YOUR LIFE EASY</div>
+            <div class="barline"></div>
+            <div class="info-wrapper">
+              <div class="skew">
+                <div class="image_A">
+                   <!-- <img id="inlinedp006" src="https://d3o1t8vp7n8wsg.cloudfront.net/assets/website_revamp/partners/driver_experience-87051334459376357b6125e2b776e61175461d3db60f2a5fdad972d51839137e.gif" alt="" > -->
+                   <video id="inlinedp006" src="/images/bhadavideo.m4v" autoplay loop></video>
+                  </div>
+                <div class="cont_1">
+                  <div class="font"><b>Attach your two wheeler or commercial vehicle </b></div>
+                  <div class="font_2">If you got a 2 wheeler, or a tata ace commercial vehicle, you are good to go! With <br>  Porter, get a delivery job and deliver goods, packages, and courier.</div>
+                  <div class="inlinedp004" ><b>No more waiting on the stand</b></div>
+                  <div class="font_2">Attach tata ace with Porter to have a steady stream of trips with minimum assured<br>income and added incentives, so that there is no waiting and idle time at the stand!</div>
+                  <div class="inlinedp004" ><b>No more bargaining. Standard Rates</b></div>     
+                  <div class="font_2">The rates and calculation methods are standardized and completely transparent. <br> No more wasting time in fixing the rates for every trip.</div>     
+                  <div class="inlinedp004" ><b>Hassle Free Navigation</b></div>
+                  <div class="font_2">With our GPS-based navigation you can drive anywhere across your city without <br> worrying about the directions. Get real-time navigation assistance on the go!</div> 
+                </div>
+              </div>
+            </div>
+        </div>
+	
+          <!-- first skew and content ends  -->
+        <div>
+          <div class="container-info2">
+            <div class="skew2" id="inlinedp005"></div>       
+          </div>
+        </div>
+      </div>
+        <!-- making your life easy ends -->
+		<br><br>
+      <div class="banner-footer" id="inlinedp007">
+        <h2 class="heading_3" id="inlinedp008" >ADDITIONAL BENEFITS</h2>
+        <div><input type="button" class="btn_2" id="inlinedp009"></div>
+          <div class="imagebanner" id="inlinedp0010">
+            <div class="features">
+                  <img class="img" src="/images/doc.png" alt="budget">
+                  <div class="title">Health Care Assistance</div>
+                  <div class="sub-title">Get healthcare benefits for you and <br> your family with mini truck <br>attachment.</div>
+            </div>     
+            <div class="features">
+                  <img class="img" id="box-img" src="/images/sheet.png" alt="box">
+                  <div class="title">Discount on Insurance</div>
+                  <div class="sub-title">Save money with reduced annual <br> maintenance and insurance costs on   <br> your vehicle.</div>
+            </div>
+            <div class="features">
+                  <img class="img" src="/images/cheque.png" alt="budget">
+                  <div class="title">Fuel card for Savings</div>
+                  <div class="sub-title">Save big on fuel costs with our smart <br> fuel card and increase your profit <br> margins!</div>
+            </div>    
+            <div class="features" >
+                  <img class="img" src="/images/truck.png" alt="budget">
+                  <div class="title">Discount on Vehicle Purchase</div>
+                  <div class="sub-title">Get major discounts on purchase of <br> new vehicles. Add to your fleet and <br> grow your business!</div>
+            </div>
+           </div>
+      </div>
+      
+	  <br><br>
+      <!-- changing peoples life  -->
+      <!--<div>
+        <div class="skew_3"></div>   
+        <div class="container-info2">      
+          <div>
+            <input type="button" class="btn_2" id="inlinedp0011">
+            <h2 class="heading_3" id="inlinedp0012">CHANGING LIFE OF PEOPLE</h2>
+          </div>
+          <div class="deskGrowing">  
+            <div class="growingDiv">
+				<div class="proCont">
+                <div class="colored_1"></div>
+                <div class="para">“Getting business at vehicle stand has become very tough today due to intense competition. But with Bhada's partner driver app, transparent fare structure and standard pricing, my life has become easier. Now I don't worry about finding customers and getting payments.”</div>
+                 
+                <img src="./images/krishna.png" alt="person_1" id="inlinedp0013"  >
+                <div class="colored"></div>
+              </div>
+      
+              <div class="proCont">
+                <div class="colored_1"></div>
+                <div class="para">“Earlier there were many restrictions on earnings because I got limited trips in market which were only from my known customers and to nearby places. I gave my truck on rent with Bhada there are no such restrictions, there are a lot of orders throughout city. I enjoy being a part of Bhada family.”</div>
+                 <img src="./images/umesh.png" alt="person_1" id="inlinedp0014" >
+                <div class="colored"></div>
+              </div>
+      
+              <div class="proCont">
+                <div class="colored_1"></div>
+                <div class="para">“I was new to Chennai and went ahead to attach my tata ace with Bhada. Bhada app's inbuilt map and navigational capability never made me feel new to city. Payment is done on time and their vendor helpdesk provides immediate solutions to all my issues.”</div>
+                <img src="./images/birju.png" alt="person_1" id="inlinedp0015">
+                <div class="colored"></div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>-->
+          <!-- Own multiple vehicle -->
+      <div>
+        <h2 class="heading_3" id="inlinedp0016">OWN MULTIPLE VEHICLES?</h2> 
+        <input type="button" class="btn_2" id="inlinedp0017">
+        <div></div>
+        <img id="inlinedp0018"  src="./images/bhadatrucks.png" alt="ownerBanner"   class="Image_c" >
+        <div id="inlinedp0019" >  
+          <h4 id="inlinedp0032"><b>If you are a fleet owner and own multiple vehicles.</b></h4>
+        </div>
+      
+        <div class="font_3">
+          <p>Keeping track of your vehicle fleet and optimising their efficiency can be a <br> huge challenge. Partner with Bhada to boost your earnings and manage  <br> your vehicles easily.
+          </p>
+        </div> 
+        <a href=""><img src="./images/contact.png" alt="contact us" class="image_Co"></a>
+      </div>
+     <!-- FAQS -->
+      <!-- <div class="faqmain"> -->
+        <div class="container border my-4" style="visibility: hidden;">
+          <div class="p-04   sm:w-1/4 w-1/2">
+              <h2 class="title-font font-large sm:text-10xl text-30xl text-gray-900 text-align:center">FAQ Section</h2>
+              <p class="leading-relaxed">.......</p>
+          </div>
+          <section class="text-grey-900 body-font">
+              <div class="flex flex-wrap -m-4 text-center">
+              </div>
+          </section>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  1. What exactly is Bhada?
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Bhada is a firm that allows you to reserve vehicles (trucks or bikes) for your specific work through its app. 
+        Simply log in, select any type of truck or 2-wheeler from a variety of possibilities, and book!
+        Obtain a verified driver and vehicle with a delivery time of less than 15 minutes.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  2. How much does it cost to higher delivery services of a bhada truck or bhada bike?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">The cost of renting a bhada truck or bhada bike is determined on the amount of kilometres travelled and the type of vehicle, and it varies by locations. You can also use the estimate option on the bhada page to receive a more precise estimate of the cost of your journey.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"text-align: center>
+                  3. Is there a labour service (loading/unloading) available?
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Yes, Bhada, has introduced a new category called "Driver-Help," in which the driver-partner assists with loading and unloading. Our Driver-Partner will help you load and unload things from the ground floor to the ground floor.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour"text-align: center>
+                  4. How to book a vehicle online through Bhada?
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Bhada is a mobile app that offers low-cost, dependable moving services.
+                  <br>To rent a vehicle, follow these steps:</br>
+                  <br>• Open the Bhada app and log in.</br>
+                  <br>• Browse from a varieties of vehicles and select the one that meets your moving requirements.</br>
+                  <br>• Set up your pick up and drop off location.</br>
+                  <br>• Fill in a few more details, use coupons to save money, and confirm your reservation.</br>
+                  <br>• Relax, our experienced and certified driver partners and technology will take care of the rest.</br></div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive"text-align: center>
+                  5. How to use Bhada's App?
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">To use the app follow the given steps:
+                  <br>• Firstly download the app from Google Play Store.</br>
+                  <br>• Choose your pick-up and delivery locations.</br>
+                  <br>• Choose from a variety of two-wheelers and trucks and rent them.</br>
+                  <br>• In less than 15 minutes, the vehicle will arrive</br></div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix"text-align: center>
+                  6. Is there intercity or interstate delivery service provided by bhada?
+                </button>
+              </h2>
+              <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Bhada does provide intercity and interstate services. You can deliver products anywhere within a 300-kilometer radius of the city centre with the intercity and interstate service.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven"text-align: center>
+                  7. Does bhada provides vehicles on monthly contEight
+                </button>
+              </h2>
+              <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">No, we do not rent out vehicles on monthly basis. For more information please contact us. </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight"text-align: center>
+                  8. What is the estimated delivery time?
+                </button>
+              </h2>
+              <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Distance and traffic play a big part in delivery time, but we always promise same-day delivery.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine"text-align: center>
+                  9. Does bhada deliver laptops?
+                </button>
+              </h2>
+              <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Yes, with Bhada's two-wheeler service, we joyfully deliver laptops, documents, gadgets, lunch boxes, misplaced keys, and so on.</div>
+            </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen"text-align: center>
+                  10. Is it necessary to pay the full amount at the end of the trip or to subtract TDS upon paying?
+                </button>
+              </h2>
+              <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">The entire fare must be paid at the time of payment. On behalf of Bhada, the TDS amount may be deposited over and above the trip fare at the applicable rates.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingEleven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven"text-align: center>
+                  11. How can I find out where the vehicle is?
+                </button>
+              </h2>
+              <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">By clicking on the live order on the app, you may track the vehicle. In addition, once a partner is assigned to you, we send you an confirmation SMS.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTweleve">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTweleve" aria-expanded="false" aria-controls="flush-collapseTweleve"text-align: center>
+                  12. Is there any assurance that the service will be delivered?
+                </button>
+              </h2>
+              <div id="flush-collapseTweleve" class="accordion-collapse collapse" aria-labelledby="flush-headingTweleve" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">We want to reassure you that our predicted arrival time and arrival time are correct. However we cannot provide any service guarantees due to the unpredictability of traffic and road conditions.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThirteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThirteen" aria-expanded="false" aria-controls="flush-collapseThirteen"text-align: center>
+                  13. Is it safe for my goods?
+                </button>
+              </h2>
+              <div id="flush-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="flush-headingThirteen" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">A background check is performed on all of our partners. You can also use our tracking system to keep an eye on your products as they are on the way.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    <!-- </div> -->
+    
+<div id="overlayp"></div>
+<%- include('footer') %>
+   </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script>
+function onReg(e) {
+
+e.preventDefault()
+
+      let myName = document.getElementById("name")
+      
+      let myNameValue = myName.value
+
+      console.log(myNameValue)
+
+      if (localStorage.getItem("users") === null){
+        localStorage.setItem("users",JSON.stringify([]));
+    }
+ 
+  let user = {
+   NAME: myNameValue,
+    
+  };
+console.log(user)
+  
+  let arr =JSON.parse(localStorage.getItem("users"))  
+  
+  arr.push(user) ;
+  
+  localStorage.setItem("users",JSON.stringify(arr));
+
+  let thankYou = document.getElementById("inlinedp001")
+  thankYou.innerHTML = null;
+ let  div1 = document.createElement("div")
+ div1.textContent = "THANK YOU FOR REGISTRATION"
+
+let  div2 = document.createElement("div")
+ div2.textContent = "We will get back to you shortly"
+ let  div3 = document.createElement("div")
+ div3.textContent = "REGISTER MORE"
+ div3.addEventListener("click", function(){
+   location.reload()
+ })
+
+
+let mynews = JSON.parse(localStorage.getItem("users"))
+let clicked = mynews[mynews.length - 1]
+let title = document.createElement("div")
+title.textContent = clicked.NAME
+
+
+div1.setAttribute("class", "thank")
+ title.setAttribute("class", "vals")
+ div2.setAttribute("class", "getback")
+ div3.setAttribute("class", "Regis")
+
+ thankYou.append(div1, title, div2, div3)
+
+  
+}
+</script>

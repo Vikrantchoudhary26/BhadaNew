@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="/css/register.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+   </head>
+   
+<body>
+  <div class="title" >
+    <%- include('header',{userName:user}) %> 
+  </div>
+  
+  <div class="container">
+    
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="/userRegistration" method="post" onsubmit="return validation()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input name="FullName" type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">City</span>
+            <!-- <input name="Registeredcity" type="text" placeholder="Enter your city" required> -->
+            <select name="Registeredcity" id="city" placeholder="CITY">
+              
+      <option value="Indore" >Indore</option>
+      <option value="Bhopal" >Bhopal</option>
+      <option value="Jabalpur" >Jabalpur</option>
+     <option value="Gwalior" >Gwalior</option>
+      <option value="	Ujjain" >	Ujjain</option>
+      <option value="Sagar" >Sagar</option>
+      <option value="Rewa" >Rewa</option>
+      <option value="katni" >katni</option>
+      <option value="Singrauli">Singrauli</option>
+      <option value="Dindori" >Dindori</option>
+      <option value="Seoni" >Seoni</option>
+      <option value="Damoh" >Damoh</option>
+      <option value="Itarsi" >Itarsi</option>
+      <option value="Mandsaur" >Mandsaur</option>
+      <option value="Khargone" >Khargone</option>
+      <option value="Sagar" >Sagar</option>
+      <option value="Khandwa">Khandwa</option>
+       <option value="Ratlam">Ratlam</option>
+      <option value="Vidisha">Vidisha</option>
+      <option value="Shivpuri">Shivpuri</option>
+              <option value="Betul" >Betul</option>
+              <option value="Narmadapuram">Narmadapuram</option>
+              <option value="Datia" >Datia</option>
+      <option value="Nagda" >Nagda</option>
+      <option value="Chhindwara" >Chhindwara</option>
+      <option value="Ratlam" >Ratlam</option>
+      <option value="Satna" >Satna</option>
+      <option value="Dewas" >Dewas</option>
+      <option value="Guna" >Guna</option>
+     <option value="Chhatarpur" >Chhatarpur</option>
+     <option value="Neemuch" >Neemuch</option>
+     <option value="Pithampur" >Pithampur</option>
+     <option value="Morena" >Morena</option>
+     <option value="Sehore" >Sehore</option>
+     <option value="Bhind" >Bhind</option>
+     <option value="Burhanpur" >Burhanpur</option>
+              <option value="Hyderbad" >Hyderbad</option>
+              <option value="Chennai" >Chennai</option>
+     <option value="Delhi" >Delhi NCR</option>
+    <option value="Bengluru" >Bengluru</option>
+      <option value="Ahemdaba" >Ahemdaba</option>
+              <option value="Pune" >Pune</option>
+              <option value="Kolkata" >Kolkata</option>
+              <option value="Surat" >Surat</option>
+              <option value="Lucknow" >Lucknow</option>
+              <option value="Jaipur" >Jaipur</option>
+              <option value="Jaipur" >Others</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input name="Registeredemail" type="email" placeholder="Enter your email" required>
+          </div> 
+          
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input name="phoneNo" type="text" placeholder="Enter your number" required name="mobile" minlength="10" maxlength = "10">
+          </div>
+          
+        </div>
+        <!-- <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div> -->
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+<script>
+  function validation()
+{
+  var phoneno = document.forms['frm']['mobile'];
+  if(isNaN(phoneno.value)||phoneno.value.length!=10)
+  {
+    alert("Not a valid Mobile Number");
+     return false;
+  }
+  
+     return true;
+  
+  }
+</script>
+
+
+</body>
+</html>
